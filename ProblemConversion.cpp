@@ -19,6 +19,7 @@ void takeInput(double& feet, double& inches)
   cin >> feet;
   cout << "Enter remaining length in inches, please: " << endl;
   cin >> inches;
+
   //Checks if inches is less than 12 and increments feet however many times 12
   //can fit into inches.
   while (inches >= 12.0)
@@ -34,7 +35,7 @@ double conversionFromFeetToMeters(double feet, double inches)
 {
   //Gets overall lenght in feet.
   double overallLengthFeet = feet + inches / 12.0;
-  //Returns
+  //Returns length in meters.
   return overallLengthFeet * 0.3048;
 }
 
@@ -60,6 +61,7 @@ void outputNumbers(double feet, double inches, double meters, double centimeters
   {
     cout << feet << " feet" << endl;
   }
+
   //Checks if unit should be inch or inches.
   if(inches == 1)
   {
@@ -70,6 +72,7 @@ void outputNumbers(double feet, double inches, double meters, double centimeters
     cout << inches << " inches" << endl;
   }
   cout << "equals to" << endl;
+
   //Checks if unit should be meter or meters.
   if(meters == 1)
   {
@@ -79,6 +82,7 @@ void outputNumbers(double feet, double inches, double meters, double centimeters
   {
     cout << meters << " meters" << endl;
   }
+
   //Checks if unit should be centimeter or centimeters.
   if(meters == 1)
   {
